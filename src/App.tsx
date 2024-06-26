@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 
 import { Main } from "@components/Main";
 import { Header } from "@components/Header";
+// import { Test } from "@components/Test";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className={styles.image_container}>
         <Header />
         <Main />
+        {/* <Test /> */}
       </div>
     </main>
   );

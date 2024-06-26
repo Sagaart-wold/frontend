@@ -3,7 +3,8 @@
 import styles from "./index.module.css";
 
 import { SearchInput } from "@components/ui/SearchInput";
-import Button from "@components/ui/Button/Button";
+// import Button from "@components/ui/Button/Button";
+import { Button, } from '@mui/material';
 
 export function Main() {
   return (
@@ -29,9 +30,14 @@ export function Main() {
           />
         </div>
 
-        <div className={styles.button}>
-          <Button variant='main_screen' text="Найти"/>
-        </div>
+        {/* <div className={styles.button}> */}
+          {/* <Button variant='main_screen' text="Найти"/> */}
+          <Button 
+            variant="outlined" 
+            color="primary" 
+            disableElevation
+            size="small">Найти</Button>
+        {/* </div> */}
       </div>
 
       <div className={styles.description_container}>
