@@ -1,7 +1,8 @@
 // import React from "react";
 
-import Button from "../ui/Button/Button";
-import { SearchInput } from "../ui/SearchInput";
+import { SearchInput } from "@components/ui/SearchInput";
+import {Button} from "@components/ui/Button/Button";
+
 import styles from "./index.module.css";
 
 
