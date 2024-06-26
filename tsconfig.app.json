@@ -23,13 +23,13 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "baseUrl": ".",
+    "baseUrl": "./src/",
     "paths": {
-      "@assets/*": ["/src/assets/*"],
-      "@components/*": ["/src/components/*"],
-      "@store/*": ["/src/store/*"],
-      "@api/*": ["/src/api/*"],
-      "@utils/*": ["/src/utils/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@store/*": ["store/*"],
+      "@api/*": ["api/*"],
+      "@utils/*": ["utils/*"],
     },
   },
   "include": ["src"]
