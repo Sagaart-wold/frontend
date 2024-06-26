@@ -1,9 +1,9 @@
 // import React from "react";
 
+import Button from "../ui/Button/Button";
+import { SearchInput } from "../ui/SearchInput";
 import styles from "./index.module.css";
 
-import { SearchInput } from "@components/ui/SearchInput";
-import Button from "@components/ui/Button/Button";
 
 export function Main() {
   return (

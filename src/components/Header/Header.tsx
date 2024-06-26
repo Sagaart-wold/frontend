@@ -2,11 +2,12 @@
 
 import styles from "./index.module.css";
 
-import bag_icon from "@assets/bag_header.svg";
-import menu_icon from "@assets/header_menu_icon.svg";
-import user_icon from "@assets/user_header.svg";
+import bag_icon from "../../assets/bag_header.svg";
+import menu_icon from "../../assets/header_menu_icon.svg";
+import user_icon from "../../assets/user_header.svg";
 
-import { SearchInput } from "@components/ui/SearchInput";
+import { SearchInput } from "../ui/SearchInput";
+
 
 export function Header() {
   return (

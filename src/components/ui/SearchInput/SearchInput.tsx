@@ -2,8 +2,8 @@
 
 import styles from "./index.module.css";
 
-import search_icon from "@assets/search_icon.svg";
-import arrow_icon from "@assets/arrow_down_icon.svg";
+import search_icon from "../../../assets/search_icon.svg";
+import arrow_icon from "../../../assets/arrow_down_icon.svg";
 
 import classNames from 'classnames';
 
