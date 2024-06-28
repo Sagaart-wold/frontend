@@ -1,7 +1,7 @@
 @import url('./vendor/index.css');
 @import url('./vendor/normalize.css');
 
-
+/* 
 :root {
   --black-text: #111318;
   --white-text: #FFFFFF;
@@ -38,5 +38,5 @@
 
 *{
   box-sizing: border-box;
-}
+} */
 

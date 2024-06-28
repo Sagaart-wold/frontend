@@ -38,6 +38,64 @@ const theme = createTheme({
       main: '#47B881',
     },
   },
+  typography: {
+    h1: {
+      fontFamily: 'Cormorant, Georgia, sans-serif',
+      fontWeight: 400,
+      fontSize: '80px',
+      fontStyle: 'normal',
+    },
+    h2: {
+      fontFamily: 'Cormorant, Georgia, sans-serif',
+      fontWeight: 400,
+      fontSize: '60px',
+      fontStyle: 'normal',
+    },
+    h3: {
+      fontFamily: 'Cormorant, Georgia, sans-serif',
+      fontWeight: 400,
+      fontSize: '36px',
+      fontStyle: 'normal',
+    },
+    h4: {
+      fontFamily: 'Cormorant, Georgia, sans-serif',
+      fontWeight: 400,
+      fontSize: '28px',
+      fontStyle: 'normal',
+    },
+    h5: {
+      fontFamily: 'Cormorant, Georgia, sans-serif',
+      fontWeight: 400,
+      fontSize: '18px',
+      fontStyle: 'normal',
+    },
+    body1: { // в макете B2
+      fontFamily: 'Monsterat, Roboto, Inter, sans-serif',
+      fontSize: '20px',
+      fontStyle: 'normal',
+    },
+    body2: { // в макете B3
+      fontFamily: 'Monsterat, Roboto, Inter, sans-serif',
+      fontSize: '18px',
+      fontStyle: 'normal',
+    },
+    subtitle1: { // в макете B1
+      fontFamily: 'Monsterat, Roboto, Inter, sans-serif',
+      fontSize: '36px',
+      fontStyle: 'normal',
+    },
+    subtitle2: { // в макете B4
+      fontFamily: 'Monsterat, Roboto, Inter, sans-serif',
+      fontSize: '16px',
+      fontStyle: 'normal',
+    },
+    button: { // в макете B2, не ипользовать - применяется к кнопкам автоматически
+      fontFamily: 'Monsterat, Roboto, Inter, sans-serif',
+      fontSize: '18px',
+      fontStyle: 'normal',
+    },
+  },
+  
   components: {
     MuiButton: {
       styleOverrides: {
@@ -91,7 +149,57 @@ const theme = createTheme({
           },
         },
       }
-    }
+    },
+    MuiTypography: { // Для переопределения общих стилей всей типографики
+      styleOverrides: {
+        root: {
+          // marginBottom: '20px',
+        },
+        h1: {
+          // color: '#111318',
+        },
+        body1: {
+          // color: '#AEAFB2',
+        },
+      }
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+
+        },
+      }
+    },
+    MuiBadge: {
+      styleOverrides: {
+        badge: {
+
+        },
+      }
+    },
+    MuiSelect: { // Select
+      styleOverrides: {
+        root: {
+
+        },
+        icon: {
+
+        },
+      }
+    },
+    MuiMenuItem: { //
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            backgroundColor: '#47B881',
+            '&:hover': {
+              backgroundColor: '#3DA8D6',
+            },
+          },
+        },
+      }
+    },
+  
   }
 });
 
@@ -99,37 +207,3 @@ const theme = createTheme({
 const responsiveTheme = responsiveFontSizes(theme);
 
 export default responsiveTheme;
-
-
-
-    // 
-  
-    // },
-    // text: {
-    //   black: '#111318',
-    //   white: '#FFF',
-    //   gray: '#717173',
-    // },
- 
-  // },
-  // typography: {
-    // fontStyle: 'normal',
-    // margin: '0',
-    // padding: '0',
-    // fontOpticalSizing: 'auto',
-    // webkitFontSmoothing: 'antialiased',
-    // mozOsxFontSmoothing: 'grayscale',
-    // webkitTextSizeAdjust: '100%',
-    // msTextSizeAdjust: '100%',
-    // mozTextSizeAdjust: '100%',
-    // textRendering: 'optimizeSpeed',
-    // h1: { //TODO?
-    //   fontFamily: 'Cormorant, Georgia, sans-serif',
-    //   fontWeight: 400,
-    //   // color: '#262C40',
-    //   fontSize: '80px',
-    //   lineHeight: '97px',
-    // },
-//   },
-//   spacing: [0, 4, 8, 16, 32, 64],
-// });
