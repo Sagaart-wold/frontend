@@ -2,6 +2,8 @@
 
 import { Header } from "@components/Header";
 import { Main } from "@components/Main";
+import { Login } from "@components/Login";
+
 
 import styles from "./index.module.css";
 
@@ -12,6 +14,7 @@ function App() {
       <div className={styles.image_container}>
         <Header />
         <Main />
+        <Login/>
       </div>
     </main>
   );
