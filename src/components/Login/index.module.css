@@ -6,31 +6,49 @@
     display: grid;
     place-items: center;
     background-color: var(--white-text);
-    padding: 120px 48px;
+    padding-inline: 120px;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
+    text-align: center;
 }
 
 .form{
     display: flex;
+    width: 100%;
+    max-width: 402px;
     flex-direction: column;
+}
+
+.errors{
+    font-size: var(--fz-p2);
+    font-family: var(--ff-paragraph);
+    color: rgb(198, 17, 14);
+    margin: 0;
+    margin-bottom: 96px;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 24px;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--black-text);
 }
 
 .label_checkbox{
     display: flex;
-    align-items: flex-end;
-    height: 24px;
-}
-
-.checkbox_text{
-    margin: 0;
+    gap: 16px;
+    margin-bottom: 48px;
 }
 
 .checkbox{
-    width: 0;
-    height: 0;
-    position: relative;
+    display: none;
 }
 .checkmark{
     width: 24px;
