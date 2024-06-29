@@ -38,7 +38,6 @@ export function Test() {
       <Typography variant="body1">Откройте заново мир искусства</Typography>
       <Typography variant="body2">Откройте заново мир искусства</Typography>
       <Typography variant="subtitle2">Откройте заново мир искусства</Typography>
-  
     </>
   );
 }

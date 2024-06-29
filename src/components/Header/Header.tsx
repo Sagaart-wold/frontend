@@ -1,10 +1,10 @@
 // import React from "react";
-
 import styles from "./index.module.css";
-
 import bag_icon from "@assets/bag_header.svg";
 import menu_icon from "@assets/header_menu_icon.svg";
 import user_icon from "@assets/user_header.svg";
+import IconButton from "@mui/material/IconButton";
+import Badge from "@mui/material/Badge";
 
 // import Button from '@mui/material/Button';
 
@@ -26,7 +26,17 @@ export function Header() {
         />
       </div>
       <div className={styles.user_container}>
-        <img className={styles.menu_icon} src={bag_icon} alt="" />
+        {/* <img className={styles.menu_icon} src={bag_icon} alt="" /> */}
+        <Badge badgeContent={4} color="primary">
+          <IconButton
+            sx={{
+              backgroundImage: `url(${bag_icon})`,
+            }}
+            aria-label="Корзина"
+            type="button"
+            color="primary"
+          />
+        </Badge>
         <img className={styles.menu_icon} src={user_icon} alt="" />
       </div>
     </header>
