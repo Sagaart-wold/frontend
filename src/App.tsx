@@ -18,23 +18,36 @@ import { Test } from "@components/Test";
 
 function App() {
   const [theme, setTheme] = useState<object>(responsiveDarkTheme);
-  const [isOpenPopup, setIsOpenPopup] = useState<boolean>(false);
+  
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [openPopup, setOpenPopup] = useState<string | null>(null);
 
-  const handleClick = () => {
-    setTheme(responsiveDarkTheme ? responsiveLightTheme : responsiveDarkTheme); // Переключение на темную тему при открытии попапа
-    setIsOpenPopup(!isOpenPopup);
+  console.log(openPopup, 'openPopup');
+
+  // Функция открытия для выезжающего меню и слева и авторизации/регистрации справа
+  const handleOpenPopup = (id: string): void => {
+    setOpenPopup(id);
   };
 
-  // const handleClose = () => {
-  //   setTheme(responsiveLightTheme); // Возвращение к светлой теме при закрытии попапа
-  //   setIsOpenPopup(false);
-  // };
+  // Функция открытия для SearchPopup 
+  const handleOpenSearchPopup = (): void => {
+    setTheme(responsiveDarkTheme ? responsiveLightTheme : responsiveDarkTheme); // Переключение на темную тему при открытии попапа
+
+  };
+
+  const handleClosePopup = (): void => {
+    setOpenPopup(null);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <main>
         <div className={styles.image_container}>
-          <Header />
+          <Header 
+          handleOpenPopup={handleOpenPopup} 
+          handleClosePopup={handleClosePopup}
+          openPopup={openPopup}
+          />
           <Main />
           <Test />
         </div>

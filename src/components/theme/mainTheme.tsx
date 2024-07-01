@@ -103,7 +103,16 @@ const mainTheme = createTheme({
   },
 
   components: {
-    MuiButton: {
+    MuiDrawer: { // выплывающий сбоку попап
+      styleOverrides: {
+        paper: {
+          width: 522,
+          backgroundColor: "#fff",
+          height: "100%",
+        },
+      },
+    },
+    MuiButton: { // кнопки
       styleOverrides: {
         root: {
           borderRadius: 0,
@@ -172,7 +181,7 @@ const mainTheme = createTheme({
         },
       },
     },
-    MuiIconButton: {
+    MuiIconButton: { // иконки
       styleOverrides: {
         root: {
           width: "32px",
@@ -196,16 +205,16 @@ const mainTheme = createTheme({
     },
     MuiMenuItem: {
       //
-      styleOverrides: {
-        root: {
-          "&.Mui-selected": {
-            backgroundColor: "#47B881",
-            "&:hover": {
-              backgroundColor: "#3DA8D6",
-            },
-          },
-        },
-      },
+      // styleOverrides: {
+      //   root: {
+      //     "&.Mui-selected": {
+      //       backgroundColor: "#47B881",
+      //       "&:hover": {
+      //         backgroundColor: "#3DA8D6",
+      //       },
+      //     },
+      //   },
+      // },
     },
   },
 });
