@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { Header } from "@components/Header";
+import { Main } from "@components/Main";
+
 import styles from "./index.module.css";
 import { ThemeProvider } from "@mui/material/styles";
 // import responsiveTheme from "./components/theme/mainTheme.tsx";

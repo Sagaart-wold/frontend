@@ -10,6 +10,7 @@ import Badge from "@mui/material/Badge";
 
 import { SearchInput } from "@components/ui/SearchInput";
 
+
 export function Header() {
   return (
     <header className={styles.container}>
