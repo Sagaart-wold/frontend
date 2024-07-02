@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 // import responsiveTheme from "./components/theme/mainTheme.tsx";
 import responsiveLightTheme from "./components/theme/lightTheme.tsx";
 import responsiveDarkTheme from "./components/theme/darkTheme.tsx";
+
 import { Main } from "@components/Main";
 import { Header } from "@components/Header";
 // import { Test } from "@components/Test";
@@ -38,6 +39,8 @@ function App() {
           handleOpenPopup={handleOpenPopup} 
           handleClosePopup={handleClosePopup}
           openPopup={openPopup}
+          isShowSearchSection={isShowSearchSection}
+          handleOpenSearchPopup={handleOpenSearchPopup}
           />
           <Main 
             isShowSearchSection={isShowSearchSection}

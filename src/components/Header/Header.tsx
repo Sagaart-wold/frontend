@@ -19,6 +19,8 @@ export const Header: React.FC<HeaderProps> = ({
   handleOpenPopup, // функция, открывающая попап
   handleClosePopup,
   openPopup, // стейт, хранящий id попапа, который нужно открыть
+  isShowSearchSection,
+  handleOpenSearchPopup,
 }) => {
 
   return (
@@ -38,13 +40,16 @@ export const Header: React.FC<HeaderProps> = ({
 
         <h2 className={styles.title}>ȘAGAART</h2>
       </div>
-      <div className={styles.input_container}>
+
+      {/* Скрывать строку поиска если показана секция Search */}
+      {!isShowSearchSection && <div className={styles.input_container}>
         <SearchInput
           variant="search"
           placeholder="Искать по названию, художнику"
           icon="search"
+          // onChange={() => handleOpenSearchPopup()} TODO элемент Влада не хавает стандартные свойства
         />
-      </div>
+      </div>}
       <div className={styles.user_container}>
         <Badge badgeContent={4} color="primary">
           <IconButton

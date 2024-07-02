@@ -5,7 +5,8 @@ export interface MenuPopupProps {
 
 export interface HeaderProps extends MenuPopupProps {
   handleOpenPopup: (dialogId: string) => void;
-  
+  isShowSearchSection: boolean;
+  handleOpenSearchPopup: () => void; //дублирование кода TODO подумать как сделать наследование
 }
 
 export interface SearchSectionProps {

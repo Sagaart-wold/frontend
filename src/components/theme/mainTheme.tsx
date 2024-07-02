@@ -203,7 +203,7 @@ const mainTheme = createTheme({
         icon: {},
       },
     },
-    MuiMenuItem: {
+    MuiMenuItem: { //стилизация меню из попапа
       //
       // styleOverrides: {
       //   root: {
@@ -215,6 +215,20 @@ const mainTheme = createTheme({
       //     },
       //   },
       // },
+    },
+    MuiOutlinedInput: { // инпут
+      styleOverrides: {
+        root: {
+          outline: 'none',
+          border: 'none',
+          borderBottom: '1px solid #111318',
+          backgroundColor: 'fff',
+          color: 'fff',
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#000', // черная рамка при фокусе
+          },
+        },
+      },
     },
   },
 });
