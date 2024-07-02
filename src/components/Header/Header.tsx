@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
           variant="search"
           placeholder="Искать по названию, художнику"
           icon="search"
-          // onChange={() => handleOpenSearchPopup()} TODO элемент Влада не хавает стандартные свойства
+          onChange={() => handleOpenSearchPopup()} 
         />
       </div>}
       <div className={styles.user_container}>

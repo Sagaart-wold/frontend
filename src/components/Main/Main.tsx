@@ -1,5 +1,11 @@
 // import React from "react";
+
+// import { Button } from "@components/ui/Button/Button";
+import { SearchInput } from "@components/ui/SearchInput";
+
 import styles from "./index.module.css";
+
+// import { SearchInput } from "@components/ui/SearchInput";
 import { SearchInput } from "@components/ui/SearchInput";
 // import Button from "@components/ui/Button/Button";
 import { Button } from "@mui/material";
