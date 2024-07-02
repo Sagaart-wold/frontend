@@ -10,10 +10,11 @@ import classNames from 'classnames';
 interface SearchParams {
   icon: 'search' | 'arrow';
   placeholder: string;
-  variant: 'search' | 'arrow'
+  variant: 'search' | 'arrow',
+  onChange?: () => void
 }
 
-export function SearchInput({ icon, placeholder,variant }: SearchParams) {
+export function SearchInput({ icon, placeholder,variant,onChange }: SearchParams) {
   return (
     <div className={classNames(styles.container, {
       [styles.search_container]: variant === 'search',
@@ -24,6 +25,7 @@ export function SearchInput({ icon, placeholder,variant }: SearchParams) {
       )}
 
       <input
+      onChange={onChange}
         className={styles.input}
         placeholder={
           placeholder
