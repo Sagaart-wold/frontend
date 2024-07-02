@@ -32,6 +32,7 @@ export function SearchInput({ icon, placeholder,variant,onChange }: SearchParams
         }
         type="text"
       />
+      
 
       {icon === "arrow" && (
         <img className={styles.arrow_icon} src={arrow_icon} alt="" />
