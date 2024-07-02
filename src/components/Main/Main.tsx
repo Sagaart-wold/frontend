@@ -1,15 +1,14 @@
 // import React from "react";
-
-import { SearchInput } from "@components/ui/SearchInput";
-import {Button} from "@components/ui/Button/Button";
-
 import styles from "./index.module.css";
-
 import { SearchInput } from "@components/ui/SearchInput";
 // import Button from "@components/ui/Button/Button";
-import { Button, } from '@mui/material';
+import { Button } from "@mui/material";
+import { SearchSection } from "../SearchSection/SearchSection";
+import { SearchSectionProps } from "../types";
 
-export function Main() {
+//выделить баннер в отдельный компонент, иконки тоже, верстка секции "поиск" и смена темы, весь текст в mui элементы
+
+function Banner() { //TODO вынести в отдельный элемент
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
@@ -34,12 +33,15 @@ export function Main() {
         </div>
 
         {/* <div className={styles.button}> */}
-          {/* <Button variant='main_screen' text="Найти"/> */}
-          <Button 
-            variant="outlined" 
-            color="primary" 
-            disableElevation
-            size="small">Найти</Button>
+        {/* <Button variant='main_screen' text="Найти"/> */}
+        <Button
+          variant="outlined"
+          color="primary"
+          disableElevation
+          size="small"
+        >
+          Найти
+        </Button>
         {/* </div> */}
       </div>
 
@@ -51,3 +53,23 @@ export function Main() {
     </div>
   );
 }
+
+export const Main: React.FC<SearchSectionProps> = ({
+  isShowSearchSection,
+  handleOpenSearchPopup,
+}) => {
+  return (
+    <>
+      {isShowSearchSection ? (
+        <SearchSection
+          handleOpenSearchPopup={handleOpenSearchPopup}
+          isShowSearchSection={isShowSearchSection}
+        />
+      ) : (
+        <>
+          <Banner />
+        </>
+      )}
+    </>
+  );
+};
