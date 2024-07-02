@@ -1,0 +1,42 @@
+@import url('./vendor/index.css');
+@import url('./vendor/normalize.css');
+
+
+:root {
+  --black-text: #111318;
+  --white-text: #FFFFFF;
+  --gray-text: #FFFFFF;
+
+  --system-red: #830D0B;
+  --system-green: #47B881;
+
+  --grafic-sky: #3DA8D6;
+  --grafic-blue: #052B89;
+  --grafic-purple: #5D0B9D;
+  --grafic-red: #830D0B;
+  --grafic-yellow: #F9B50B;
+  --grafic-green: #47B881;
+
+  --fz-h1: 80px;
+  --fz-h2: 36px;
+  --fz-h3: 28px;
+  --fz-h4: 18px;
+
+  --ff-heading: 'Cormorant', sans-serif;
+  --ff-paragraph: 'Monsterat', sans-serif;
+
+
+  --fz-p1: 20px;
+  --fz-p2: 18px;
+  --fz-p3: 16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Monsterat';
+    src:
+    url('./fonts/Montserrat-Regular.woff'),
+    url('./fonts/Montserrat-Regular.woff2');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src:
+    url('./fonts/Cormorant-Regular.woff'),
+    url('./fonts/Cormorant-Regular.woff2');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant-Italic';
+    src:
+    url('./fonts/Cormorant-Italic.woff'),
+    url('./fonts/Cormorant-Italic.woff2');
+    font-style: normal;
+    font-display: swap;
+}
