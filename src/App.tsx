@@ -21,7 +21,9 @@ import { Test } from "@components/Test";
 
 function App() {
   const [theme, setTheme] = useState<object>(responsiveDarkTheme);
-  const [isShowSearchSection, setIsShowSearchSection] = useState<boolean>(false);//false
+  const [isShowSearchSection, setIsShowSearchSection] = useState<boolean>(
+    false
+  ); //false
   // Единый стейт для боковых попапов
   const [openPopup, setOpenPopup] = useState<string | null>(null);
 
@@ -45,18 +47,27 @@ function App() {
     <ThemeProvider theme={theme}>
       <main>
         <div className={styles.image_container}>
-          <Header />
-          <Login/>
-          <Main />
-          <Test />
-          <Header 
-          handleOpenPopup={handleOpenPopup} 
-          handleClosePopup={handleClosePopup}
-          openPopup={openPopup}
-          isShowSearchSection={isShowSearchSection}
-          handleOpenSearchPopup={handleOpenSearchPopup}
+          <Header
+            handleOpenPopup={handleOpenPopup}
+            handleClosePopup={handleClosePopup}
+            openPopup={openPopup}
+            isShowSearchSection={isShowSearchSection}
+            handleOpenSearchPopup={handleOpenSearchPopup}
           />
-          <Main 
+          <Login />
+          <Main
+            isShowSearchSection={isShowSearchSection}
+            handleOpenSearchPopup={handleOpenSearchPopup}
+          />
+          <Test />
+          <Header
+            handleOpenPopup={handleOpenPopup}
+            handleClosePopup={handleClosePopup}
+            openPopup={openPopup}
+            isShowSearchSection={isShowSearchSection}
+            handleOpenSearchPopup={handleOpenSearchPopup}
+          />
+          <Main
             isShowSearchSection={isShowSearchSection}
             handleOpenSearchPopup={handleOpenSearchPopup}
           />
