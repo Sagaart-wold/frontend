@@ -10,29 +10,22 @@ import { Main } from "@components/Main";
 import { Header } from "@components/Header";
 import { Test } from "@components/Test";
 
-// import Dialog from "@mui/material/Dialog";
-// import DialogActions from '@mui/material/DialogActions';
-// import DialogContent from '@mui/material/DialogContent';
-// import DialogContentText from '@mui/material/DialogContentText';
-// import DialogTitle from '@mui/material/DialogTitle';
-
 function App() {
   const [theme, setTheme] = useState<object>(responsiveDarkTheme);
-  
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [isShowSearchSection, setIsShowSearchSection] = useState<boolean>(false);//false
+  // Единый стейт для боковых попапов
   const [openPopup, setOpenPopup] = useState<string | null>(null);
 
-  console.log(openPopup, 'openPopup');
-
-  // Функция открытия для выезжающего меню и слева и авторизации/регистрации справа
+  // Функция открытия для выезжающего меню слева и авторизации/регистрации справа, принимает id попапа (string)
   const handleOpenPopup = (id: string): void => {
     setOpenPopup(id);
   };
 
-  // Функция открытия для SearchPopup 
+  // Функция переключения отображения секции Search
   const handleOpenSearchPopup = (): void => {
-    setTheme(responsiveDarkTheme ? responsiveLightTheme : responsiveDarkTheme); // Переключение на темную тему при открытии попапа
-
+    // Переключение на темную тему при открытии попапа
+    setTheme(responsiveDarkTheme ? responsiveLightTheme : responsiveDarkTheme);
+    setIsShowSearchSection(true);
   };
 
   const handleClosePopup = (): void => {
@@ -48,8 +41,11 @@ function App() {
           handleClosePopup={handleClosePopup}
           openPopup={openPopup}
           />
-          <Main />
-          <Test />
+          <Main 
+            isShowSearchSection={isShowSearchSection}
+            handleOpenSearchPopup={handleOpenSearchPopup}
+          />
+          {/* <Test /> */}
         </div>
       </main>
     </ThemeProvider>

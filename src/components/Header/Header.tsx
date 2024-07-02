@@ -1,37 +1,27 @@
-// import React from "react";
+// import React from 'react';
 import styles from "./index.module.css";
-import bag_icon from "@assets/bag_header.svg";
-// import menu_icon from "@assets/header_menu_icon.svg";
-import MenuIcon from '../svgIcons/MenuIcon';
+// import bag_icon from "@assets/bag_header.svg";
+import BagIcon from '../svgIcons/BagIcon';
+// import menu_icon from '@assets/header_menu_icon.svg'; TODO удалить из assets
+import MenuIcon from "../svgIcons/MenuIcon";
 import user_icon from "@assets/user_header.svg";
 import IconButton from "@mui/material/IconButton";
-import {
-  MenuList,
-  MenuItem,
-  Badge,
-  Button,
-  Drawer,
-} from "@mui/material";
-
-// import Button from '@mui/material/Button';
+import { MenuPopup } from "../MenuPopup/MenuPopup";
+import { AuthPopup } from "../AuthPopup/AuthPopup";
+import { HeaderProps } from "../types";
+import { Badge } from "@mui/material";
 import { SearchInput } from "@components/ui/SearchInput";
 
-interface HeaderProps {
-  handleOpenPopup: (dialogId: string) => void;
-  handleClosePopup: () => void;
-  openPopup: string | null;
-}
-
-type Anchor = "top" | "left" | "bottom" | "right";
+console.log(BagIcon)
 
 export const Header: React.FC<HeaderProps> = ({
-  handleOpenPopup,
+  handleOpenPopup, // функция, открывающая попап
   handleClosePopup,
-  openPopup,
+  openPopup, // стейт, хранящий id попапа, который нужно открыть
 }) => {
   return (
     <header className={styles.container}>
-      {/* <Button variant="contained">Contained</Button> */}
+      {/* <Button variant='contained'>Contained</Button> */}
       <div className={styles.menu_container}>
         <IconButton
           aria-label="Корзина"
@@ -39,25 +29,11 @@ export const Header: React.FC<HeaderProps> = ({
           color="primary"
           onClick={() => handleOpenPopup("menuIcon")}
         >
-          <MenuIcon></MenuIcon> {/*TODO не менячет цвет обратно */}
+          <MenuIcon color="primary"></MenuIcon> {/*TODO не менячет цвет обратно */}
         </IconButton>
-        <Drawer // TODO: вынести в отдельный компонет с children
-          // anchor={anchor}
-          open={openPopup === "menuIcon"}
-          onClose={handleClosePopup}
-        >
-          <Button onClick={handleClosePopup} color="primary">
-            Close
-          </Button>
 
-          <MenuList>
-            <MenuItem>Каталог</MenuItem>
-            <MenuItem>Художники</MenuItem>
-            <MenuItem>Новости</MenuItem>
-            <MenuItem>Аналитика</MenuItem>
-          </MenuList>
+        <MenuPopup openPopup={openPopup} handleClosePopup={handleClosePopup} />
 
-        </Drawer>
         <h2 className={styles.title}>ȘAGAART</h2>
       </div>
       <div className={styles.input_container}>
@@ -71,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
         <Badge badgeContent={4} color="primary">
           <IconButton
             sx={{
-              backgroundImage: `url(${bag_icon})`,
+              backgroundImage: `url(${BagIcon})`,
             }}
             aria-label="Корзина"
             type="button"
@@ -90,18 +66,9 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={() => handleOpenPopup("accountPopup")}
           // содержимое общего компонента AccountPopup отображается в зависимости от того, зарегистрирован пользователь или нет
         />
-        
-        <Drawer // TODO: вынести в отдельный компонет с children
-        // TODO: выезжает не с той стороны
-          // anchor={anchor}
-          open={openPopup === "accountPopup"}
-          onClose={handleClosePopup}
-        >
-          <Button onClick={handleClosePopup} color="primary">
-            Close
-          </Button>
 
-        </Drawer>
+        <AuthPopup openPopup={openPopup} handleClosePopup={handleClosePopup} />
+
       </div>
     </header>
   );
