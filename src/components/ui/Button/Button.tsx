@@ -9,7 +9,7 @@ interface ButtonParams {
     text: string,
 }
 
-export default function Button({variant, text}: ButtonParams) {
+export function Button({variant, text}: ButtonParams) {
   return (
         <button className={classNames(styles.button, {
             [styles.button_main]: variant === 'main',

@@ -12,6 +12,7 @@ import { HeaderProps } from "../types";
 import { Badge } from "@mui/material";
 import { SearchInput } from "@components/ui/SearchInput";
 
+
 console.log(BagIcon)
 
 export const Header: React.FC<HeaderProps> = ({
@@ -19,6 +20,7 @@ export const Header: React.FC<HeaderProps> = ({
   handleClosePopup,
   openPopup, // стейт, хранящий id попапа, который нужно открыть
 }) => {
+
   return (
     <header className={styles.container}>
       {/* <Button variant='contained'>Contained</Button> */}

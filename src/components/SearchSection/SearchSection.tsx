@@ -3,11 +3,12 @@ import { SearchSectionProps } from "../types";
 
 export const SearchSection: React.FC<SearchSectionProps> = ({
   isShowSearchSection,
-  handleOpenSearchPopup
+  handleOpenSearchPopup,
 }) => { // запрос к серверу, получение карточек и рекомендаций, затем загрузка
   return (
-    <header>
-
+    // заглушка
+    <header onClick={handleOpenSearchPopup}>
+      {isShowSearchSection}
     </header>
   );
 };
