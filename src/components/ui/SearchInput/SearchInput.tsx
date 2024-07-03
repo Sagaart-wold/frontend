@@ -37,6 +37,7 @@ export function SearchInput({
         placeholder={placeholder}
         type="text"
       />
+      
 
       {icon === "arrow" && (
         <img className={styles.arrow_icon} src={arrow_icon} alt="" />
