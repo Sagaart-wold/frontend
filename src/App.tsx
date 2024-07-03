@@ -1,39 +1,27 @@
 import { useState } from "react";
-
 import { Header } from "@components/Header";
-import { Login } from "@components/Login";
 import { Main } from "@components/Main";
-
-import styles from "./index.module.css";
 import { ThemeProvider } from "@mui/material/styles";
-// import responsiveTheme from "./components/theme/mainTheme.tsx";
-import responsiveDarkTheme from "./components/theme/darkTheme.tsx";
-import responsiveLightTheme from "./components/theme/lightTheme.tsx";
-
-import { Test } from "@components/Test";
-
-// import Dialog from "@mui/material/Dialog";
-// import DialogActions from '@mui/material/DialogActions';
-// import DialogContent from '@mui/material/DialogContent';
-// import DialogContentText from '@mui/material/DialogContentText';
-// import DialogTitle from '@mui/material/DialogTitle';
-// import { Test } from "@components/Test";
+import darkTheme from "./components/theme/darkTheme.tsx";
+import lightTheme from "./components/theme/lightTheme.tsx";
 
 function App() {
-  const [theme, setTheme] = useState<object>(responsiveDarkTheme);
-  const [isShowSearchSection, setIsShowSearchSection] = useState<boolean>(false);//false
-  // Единый стейт для боковых попапов
+  const [theme, setTheme] = useState<object>(darkTheme);
+  const [isShowSearchSection, setIsShowSearchSection] = useState<boolean>(
+    false
+  );
+  // Unified state for side popups
   const [openPopup, setOpenPopup] = useState<string | null>(null);
 
-  // Функция открытия для выезжающего меню слева и авторизации/регистрации справа, принимает id попапа (string)
+  // Function to open the sliding menu on the left and authorization/registration on the right, takes the id of the popup (string)
   const handleOpenPopup = (id: string): void => {
     setOpenPopup(id);
   };
 
-  // Функция переключения отображения секции Search
+  // Function to toggle the display of the Search section
   const handleOpenSearchPopup = (): void => {
-    // Переключение на темную тему при открытии попапа
-    setTheme(responsiveDarkTheme ? responsiveLightTheme : responsiveDarkTheme);
+    // Switch to the dark theme when the popup is opened
+    setTheme(darkTheme ? lightTheme : darkTheme);
     setIsShowSearchSection(true);
   };
 
@@ -44,24 +32,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <main>
-        <div className={styles.image_container}>
-          <Header />
-          <Login/>
-          <Main />
-          <Test />
-          <Header 
-          handleOpenPopup={handleOpenPopup} 
+        <Header
+          handleOpenPopup={handleOpenPopup}
           handleClosePopup={handleClosePopup}
           openPopup={openPopup}
           isShowSearchSection={isShowSearchSection}
           handleOpenSearchPopup={handleOpenSearchPopup}
-          />
-          <Main 
-            isShowSearchSection={isShowSearchSection}
-            handleOpenSearchPopup={handleOpenSearchPopup}
-          />
-          {/* <Test /> */}
-        </div>
+        />
+        <Main
+          isShowSearchSection={isShowSearchSection}
+          handleOpenSearchPopup={handleOpenSearchPopup}
+        />
       </main>
     </ThemeProvider>
   );

@@ -11,7 +11,15 @@ export const MyGlobalStyles: React.FC<MyProps> = ({ children }) => (
       styles={{
         "*": {
           boxSizing: "border-box",
-          // border: "1px solid red",
+        },
+        ".container": {
+          margin: '177px 0',
+          padding: "48px 120px",
+          display: "flex",
+          position: "fixed",
+          backgroundColor: "transparent",
+          alignItems: "center",
+          width: "100%",
         },
         ".root": {
           minHeight: "100vh",
@@ -20,18 +28,18 @@ export const MyGlobalStyles: React.FC<MyProps> = ({ children }) => (
           margin: 0,
           padding: 0,
           fontOpticalSizing: "auto",
-          webkitFontSmoothing: "antialiased",
-          mozOsxFontSmoothing: "grayscale",
-          webkitTextSizeAdjust: "100%",
+          WebkitFontSmoothing: "antialiased",
+          MozOsxFontSmoothing: "grayscale",
+          WebkitTextSizeAdjust: "100%",
           msTextSizeAdjust: "100%",
-          mozTextSizeAdjust: "100%",
+          MozTextSizeAdjust: "100%",
           textRendering: "optimizeSpeed",
           scrollBehavior: "smooth",
         },
         ul: {
           listStyle: "none",
         },
-        /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+        /* Remove all animations and transitions for people who prefer not to use them */
         "@media (prefers-reduced-motion: reduce)": {
           "*": {
             animationDuration: "0.01ms !important",
@@ -43,14 +51,14 @@ export const MyGlobalStyles: React.FC<MyProps> = ({ children }) => (
         ":any-link": {
           textDecoration: "none",
         },
-        'input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus': {
-          WebkitTextFillColor: 'white',
-          WebkitBoxShadow: '0 0 0px 1000px #bcc3d0 inset',
-          transition: 'background-color 5000s ease-in-out 0.2s',
+        "input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus": {
+          WebkitTextFillColor: "white",
+          WebkitBoxShadow: "0 0 0px 1000px #bcc3d0 inset",
+          transition: "background-color 5000s ease-in-out 0.2s",
         },
         img: {
-          display: 'block',
-        }
+          display: "block",
+        },
       }}
     />
     {children}

@@ -1,22 +1,14 @@
-// import React from 'react';
-import { SearchSectionProps } from "../types"; // TODO
+import { SearchSectionProps } from "../types";
 import {
   Box,
   TextField,
   IconButton,
   Button,
-  InputAdornment
+  InputAdornment,
 } from "@mui/material";
-import { useForm, Controller } from 'react-hook-form';
+import { useForm, Controller } from "react-hook-form";
 
-
-
-// {
-//   isShowSearchSection,
-//   handleOpenSearchPopup,
-// }
 export const SearchSection: React.FC<SearchSectionProps> = () => {
-  // запрос к серверу, получение карточек и рекомендаций, затем загрузка
 
   const { control, handleSubmit, reset } = useForm({
     defaultValues: {
@@ -25,7 +17,7 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
   });
 
   const onSubmit = (data: { search: string }) => {
-    console.log(data, 'поиск');
+    console.log(data, "поиск");
   };
 
   const handleClearSearch = () => {
@@ -33,7 +25,14 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
   };
 
   return (
-    <Box display="flex" alignItems="center" width="100%" component="form" onSubmit={handleSubmit(onSubmit)}>
+    <section className="container">
+      <Box
+        display="flex"
+        alignItems="center"
+        width="100%"
+        component="form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <Controller
           name="search"
           control={control}
@@ -45,32 +44,36 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    {/* <SearchIcon /> */}
                   </InputAdornment>
                 ),
                 endAdornment: field.value && (
                   <InputAdornment position="end">
                     <IconButton onClick={handleClearSearch}>
-                      {/* <CloseIcon /> */}
                     </IconButton>
                   </InputAdornment>
                 ),
               }}
               fullWidth
               sx={{
-                '& .MuiOutlinedInput-root': {
+                "& .MuiOutlinedInput-root": {
                   paddingRight: 0,
                 },
-                '& .MuiInputBase-input': {
-                  // padding: '10px 14px',
+                "& .MuiInputBase-input": {
                 },
               }}
             />
           )}
         />
-        <Button type="submit" variant="contained" size='medium' > {/*sx={{ marginLeft: 2 }} */}
+        <Button
+          variant="contained"
+          disableElevation
+          type="submit"
+          size="medium"
+          color="secondary"
+        >
           Найти
         </Button>
       </Box>
+    </section>
   );
 };

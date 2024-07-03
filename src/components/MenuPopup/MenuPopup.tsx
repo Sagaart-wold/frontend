@@ -1,8 +1,7 @@
-// import React from "react";
-import { MenuList, MenuItem, Button, Drawer } from "@mui/material";
+import { MenuList, MenuItem, Button, Drawer, Typography } from "@mui/material";
 import { MenuPopupProps } from "../types";
 
-export const MenuPopup: React.FC<MenuPopupProps> = ({ //TODO необходима стилизация
+export const MenuPopup: React.FC<MenuPopupProps> = ({
   openPopup,
   handleClosePopup,
 }) => {
@@ -12,11 +11,35 @@ export const MenuPopup: React.FC<MenuPopupProps> = ({ //TODO необходим�
         Close
       </Button>
 
-      <MenuList>
-        <MenuItem>Каталог</MenuItem>
-        <MenuItem>Художники</MenuItem>
-        <MenuItem>Новости</MenuItem>
-        <MenuItem>Аналитика</MenuItem>
+      <MenuList
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "522px",
+        }}
+      >
+        <MenuItem>
+          <Typography variant="h4" sx={{ textAlign: "left", width: "260px" }}>
+            Каталог
+          </Typography>
+        </MenuItem>
+        <MenuItem>
+          <Typography variant="h4" sx={{ textAlign: "left", width: "260px" }}>
+            Художники
+          </Typography>
+        </MenuItem>
+        <MenuItem>
+          <Typography variant="h4" sx={{ textAlign: "left", width: "260px" }}>
+            Новости
+          </Typography>
+        </MenuItem>
+        <MenuItem>
+          <Typography variant="h4" sx={{ textAlign: "left", width: "260px" }}>
+            Аналитика
+          </Typography>
+        </MenuItem>
       </MenuList>
     </Drawer>
   );
