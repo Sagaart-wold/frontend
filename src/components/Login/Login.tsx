@@ -27,45 +27,45 @@ export function Login() {
   };
 
   return (
-    // <div className={styles.container}>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <Typography style={{textAlign: 'center'}} variant="h3">Вход</Typography>
-        <span className={styles.errors}>
-          {errors.email?.message || errors.password?.message}
-        </span>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <Typography style={{ textAlign: "center" }} variant="h3">
+        Вход
+      </Typography>
+      <span className={styles.errors}>
+        {errors.email?.message || errors.password?.message}
+      </span>
 
-        <div className={styles.fields}>
-          <FormInput register={register} name="email" placeholder="email" />
+      <div className={styles.fields}>
+        <FormInput register={register} name="email" placeholder="email" />
 
-          <FormInput
-            register={register}
-            name="password"
-            icon={true}
-            placeholder="пароль"
-          />
-        </div>
+        <FormInput
+          register={register}
+          name="password"
+          icon={true}
+          placeholder="пароль"
+        />
+      </div>
 
-        <Typography
-          style={{ textAlign: "left", marginBottom: "48px" }}
-          variant="subtitle2"
-        >
-          <a className={styles.link} href="">
-            Забыли пароль?
-          </a>
-        </Typography>
+      <Typography
+        style={{ textAlign: "left", marginBottom: "48px" }}
+        variant="subtitle2"
+      >
+        <a className={styles.link} href="">
+          Забыли пароль?
+        </a>
+      </Typography>
 
-        <label className={styles.label_checkbox} htmlFor="checkbox">
-          <input className={styles.checkbox} id="checkbox" type="checkbox" />
-          <span className={styles.checkmark} />
-          <Typography variant="subtitle2">Запомнить меня</Typography>
-        </label>
-        <Button type="submit" variant="contained" disableElevation size="large">
-          Войти
-        </Button>
-        <Button variant="outlined" disableElevation size="large">
-          Зарегистрироваться
-        </Button>
-      </form>
-    // </div>
+      <label className={styles.label_checkbox} htmlFor="checkbox">
+        <input className={styles.checkbox} id="checkbox" type="checkbox" />
+        <span className={styles.checkmark} />
+        <Typography variant="subtitle2">Запомнить меня</Typography>
+      </label>
+      <Button type="submit" variant="contained" disableElevation size="large">
+        Войти
+      </Button>
+      <Button variant="outlined" disableElevation size="large">
+        Зарегистрироваться
+      </Button>
+    </form>
   );
 }

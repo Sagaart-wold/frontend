@@ -11,21 +11,10 @@ export const MyGlobalStyles: React.FC<MyProps> = ({ children }) => (
       styles={{
         "*": {
           boxSizing: "border-box",
-          // border: "1px solid red",
         },
         ".container": {
-          // далее стили container из компонента main TODO удалить если они больше нигде не используются
-          // width: "100%",
-          // height: "100vh",
-          // paddingInline: "120px",
-          // display: "flex",
-          // flexDirection: "column",
-          // alignItems: "center",
-          // position: "relative",
-          // paddingBottom: "64px",
-          //стили container из компонента main
           margin: '177px 0',
-          padding: "48px 120px", //120px
+          padding: "48px 120px",
           display: "flex",
           position: "fixed",
           backgroundColor: "transparent",

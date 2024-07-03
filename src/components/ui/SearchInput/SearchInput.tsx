@@ -7,7 +7,7 @@ import arrow_icon from "@assets/arrow_down_icon.svg";
 
 import classNames from "classnames";
 
-interface SearchParams { //
+interface SearchParams {
   icon: "search" | "arrow";
   placeholder: string;
   variant: "search" | "arrow";

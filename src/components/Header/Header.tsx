@@ -75,7 +75,6 @@ export const Header: React.FC<HeaderProps> = ({
                   height: "100%",
                 }}
               />
-              {/* TODO не меняет цвет обратно */}
             </IconButton>
             <MenuPopup
               openPopup={openPopup}

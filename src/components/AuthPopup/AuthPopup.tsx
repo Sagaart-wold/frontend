@@ -23,7 +23,7 @@ export const AuthPopup: React.FC<MenuPopupProps> = ({
         },
       }}
     >
-      <Box sx={{position: 'relative'}}>
+      <Box sx={{ position: "relative" }}>
         <IconButton
           aria-label="Корзина"
           type="button"
@@ -35,9 +35,9 @@ export const AuthPopup: React.FC<MenuPopupProps> = ({
             alignItems: "center",
             width: 35,
             height: 35,
-            position: 'fixed',
-            top: '48px',
-            right: '120px',
+            position: "fixed",
+            top: "48px",
+            right: "120px",
           }}
         >
           <CloseIcon />

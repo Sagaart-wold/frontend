@@ -2,15 +2,6 @@ import { createTheme } from "@mui/material/styles";
 
 const mainTheme = createTheme({
   palette: {
-    // primary: {
-    //   main: "#111318", //присваивается вновь созданным элементам по умолчанию
-    //   light: "#FFF",
-    // },
-    // secondary: {
-    //   // для вывертки
-    //   main: "#FFF",
-    //   // dark: '#111318'
-    // },
     info: {
       main: "#AEAFB2",
     },
@@ -124,15 +115,12 @@ const mainTheme = createTheme({
           height: 61,
         },
         sizeSmall: {
-          // fontSize: '12px',
           width: "205px",
         },
         sizeMedium: {
-          // fontSize: '14px',
           width: "260px",
         },
         sizeLarge: {
-          // fontSize: '16px',
           width: "402px",
         },
         outlinedPrimary: {
@@ -171,20 +159,6 @@ const mainTheme = createTheme({
         },
       },
     },
-    MuiTypography: {
-      // Для переопределения общих стилей всей типографики
-      styleOverrides: {
-        root: {
-          // marginBottom: '20px',
-        },
-        h1: {
-          // color: '#111318',
-        },
-        body1: {
-          // color: '#AEAFB2',
-        },
-      },
-    },
     MuiIconButton: { // иконки
       styleOverrides: {
         root: {
@@ -208,19 +182,6 @@ const mainTheme = createTheme({
         root: {},
         icon: {},
       },
-    },
-    MuiMenuItem: { //стилизация меню из попапа
-      //
-      // styleOverrides: {
-      //   root: {
-      //     "&.Mui-selected": {
-      //       backgroundColor: "#47B881",
-      //       "&:hover": {
-      //         backgroundColor: "#3DA8D6",
-      //       },
-      //     },
-      //   },
-      // },
     },
     MuiOutlinedInput: { // инпут
       styleOverrides: {
