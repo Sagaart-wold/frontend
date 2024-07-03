@@ -5,31 +5,36 @@ import styles from "./index.module.css";
 import search_icon from "@assets/search_icon.svg";
 import arrow_icon from "@assets/arrow_down_icon.svg";
 
-import classNames from 'classnames';
+import classNames from "classnames";
 
-interface SearchParams {
-  icon: 'search' | 'arrow';
+interface SearchParams { //
+  icon: "search" | "arrow";
   placeholder: string;
-  variant: 'search' | 'arrow',
-  onChange?: () => void
+  variant: "search" | "arrow";
+  onClick?: () => void;
 }
 
-export function SearchInput({ icon, placeholder,variant,onChange }: SearchParams) {
+export function SearchInput({
+  icon,
+  placeholder,
+  variant,
+  onClick,
+}: SearchParams) {
   return (
-    <div className={classNames(styles.container, {
-      [styles.search_container]: variant === 'search',
-      [styles.arrow_container]: variant === 'arrow',
-    })}>
+    <div
+      className={classNames(styles.container, {
+        [styles.search_container]: variant === "search",
+        [styles.arrow_container]: variant === "arrow",
+      })}
+    >
       {icon === "search" && (
         <img className={styles.icon} src={search_icon} alt="" />
       )}
 
       <input
-      onChange={onChange}
+        onClick={onClick}
         className={styles.input}
-        placeholder={
-          placeholder
-        }
+        placeholder={placeholder}
         type="text"
       />
 

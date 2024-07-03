@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 const mainTheme = createTheme({
   palette: {
@@ -72,32 +72,37 @@ const mainTheme = createTheme({
     },
     body1: {
       // в макете B2
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "20px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     body2: {
       // в макете B3
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "18px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     subtitle1: {
       // в макете B1
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "36px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     subtitle2: {
       // в макете B4
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "16px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     button: {
       // в макете B2, не ипользовать - применяется к кнопкам автоматически
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "18px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
   },
@@ -106,9 +111,8 @@ const mainTheme = createTheme({
     MuiDrawer: { // выплывающий сбоку попап
       styleOverrides: {
         paper: {
-          width: 522,
           backgroundColor: "#fff",
-          height: "100%",
+          height: '1080px',
         },
       },
     },
@@ -188,6 +192,8 @@ const mainTheme = createTheme({
           height: "32px",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          padding: 0,
+          margin: 0,
         },
       },
     },
@@ -233,7 +239,4 @@ const mainTheme = createTheme({
   },
 });
 
-//автоматическая подстройка шрифтов под размер экрана
-const responsiveTheme = responsiveFontSizes(mainTheme);
-
-export default responsiveTheme;
+export default mainTheme;

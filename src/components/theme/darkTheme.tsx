@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import mainTheme from './mainTheme';
 
 const darkTheme = createTheme({
@@ -119,7 +119,4 @@ const darkTheme = createTheme({
   // },
 });
 
-//автоматическая подстройка шрифтов под размер экрана
-const responsiveDarkTheme = responsiveFontSizes(darkTheme);
-
-export default responsiveDarkTheme;
+export default darkTheme;

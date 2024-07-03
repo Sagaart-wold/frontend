@@ -1,15 +1,8 @@
-// import React from "react";
-
-// import { Button } from "@components/ui/Button/Button";
 import { SearchInput } from "@components/ui/SearchInput";
-
 import styles from "./index.module.css";
-// import Button from "@components/ui/Button/Button";
 import { Button } from "@mui/material";
 import { SearchSection } from "../SearchSection/SearchSection";
 import { SearchSectionProps } from "../types";
-
-//выделить баннер в отдельный компонент, иконки тоже, верстка секции "поиск" и смена темы, весь текст в mui элементы
 
 function Banner() { //TODO вынести в отдельный элемент
   return (
@@ -69,9 +62,7 @@ export const Main: React.FC<SearchSectionProps> = ({
           isShowSearchSection={isShowSearchSection}
         />
       ) : (
-        <>
           <Banner />
-        </>
       )}
     </>
   );

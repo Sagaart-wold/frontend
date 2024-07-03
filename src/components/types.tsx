@@ -1,6 +1,7 @@
 export interface MenuPopupProps {
   openPopup: string | null;
   handleClosePopup: () => void;
+  // handleOpenPopup: (dialogId: string) => void; //дублирование кода TODO подумать как сделать наследование
 }
 
 export interface HeaderProps extends MenuPopupProps {

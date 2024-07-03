@@ -1,13 +1,13 @@
 import React from "react";
 import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
 
-interface BagIconProps extends SvgIconProps {}
+interface CustomIconProps extends SvgIconProps {}
 
-const BagIcon: React.FC<BagIconProps> = (props) => (
+const AccountIcon: React.FC<CustomIconProps> = (props) => (
   <SvgIcon {...props} viewBox="0 0 32 32">
-    <rect width="50" height="50" fill="none" />
+    <rect width="32" height="32" fill="none" />
     <path
-      d="M27 9C27.55 9 28 9.44 28 10L28 26C28 26.55 27.55 27 27 27L5 27C4.44 27 4 26.55 4 26L4 10C4 9.44 4.44 9 5 9L27 9Z"
+      d="M16 20C11.58 20 8 16.41 8 12C8 7.58 11.58 4 16 4C20.41 4 24 7.58 24 12C24 16.41 20.41 20 16 20Z"
       stroke="currentColor"
       strokeOpacity="1"
       strokeWidth="1.5"
@@ -15,7 +15,7 @@ const BagIcon: React.FC<BagIconProps> = (props) => (
       fill="none"
     />
     <path
-      d="M11 13L11 9C11 7.67 11.52 6.4 12.46 5.46C13.4 4.52 14.67 4 16 4C17.32 4 18.59 4.52 19.53 5.46C20.47 6.4 21 7.67 21 9L21 13"
+      d="M3.87 27C5.1 24.87 6.87 23.1 8.99 21.87C11.12 20.64 13.54 19.99 16 19.99C18.45 19.99 20.87 20.64 23 21.87C25.12 23.1 26.89 24.87 28.12 27"
       stroke="currentColor"
       strokeOpacity="1"
       strokeWidth="1.5"
@@ -26,4 +26,4 @@ const BagIcon: React.FC<BagIconProps> = (props) => (
   </SvgIcon>
 );
 
-export default BagIcon;
+export default AccountIcon;

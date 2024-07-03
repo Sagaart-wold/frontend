@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import mainTheme from './mainTheme';
 
 const lightTheme = createTheme({
@@ -121,7 +121,4 @@ const lightTheme = createTheme({
   // },
 });
 
-//автоматическая подстройка шрифтов под размер экрана
-const responsiveLightTheme = responsiveFontSizes(lightTheme);
-
-export default responsiveLightTheme;
+export default lightTheme;

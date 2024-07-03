@@ -5,11 +5,10 @@ import {
   TextField,
   IconButton,
   Button,
-  InputAdornment
+  InputAdornment,
 } from "@mui/material";
-import { useForm, Controller } from 'react-hook-form';
-
-
+import { useForm, Controller } from "react-hook-form";
+// import styles from "./index.module.css";
 
 // {
 //   isShowSearchSection,
@@ -25,7 +24,7 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
   });
 
   const onSubmit = (data: { search: string }) => {
-    console.log(data, 'поиск');
+    console.log(data, "поиск");
   };
 
   const handleClearSearch = () => {
@@ -33,7 +32,14 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
   };
 
   return (
-    <Box display="flex" alignItems="center" width="100%" component="form" onSubmit={handleSubmit(onSubmit)}>
+    <div className='container'>
+      <Box
+        display="flex"
+        alignItems="center"
+        width="100%"
+        component="form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <Controller
           name="search"
           control={control}
@@ -58,19 +64,22 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
               }}
               fullWidth
               sx={{
-                '& .MuiOutlinedInput-root': {
+                "& .MuiOutlinedInput-root": {
                   paddingRight: 0,
                 },
-                '& .MuiInputBase-input': {
+                "& .MuiInputBase-input": {
                   // padding: '10px 14px',
                 },
               }}
             />
           )}
         />
-        <Button type="submit" variant="contained" size='medium' > {/*sx={{ marginLeft: 2 }} */}
+        <Button variant="contained" disableElevation type="submit" size="medium" color="secondary">
+          {" "}
+          {/*sx={{ marginLeft: 2 }} */}
           Найти
         </Button>
       </Box>
+    </div>
   );
 };

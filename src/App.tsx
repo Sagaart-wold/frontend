@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import { Header } from "@components/Header";
-import { Login } from "@components/Login";
+
 import { Main } from "@components/Main";
 
-import styles from "./index.module.css";
+// import styles from "./index.module.css";
 import { ThemeProvider } from "@mui/material/styles";
 // import responsiveTheme from "./components/theme/mainTheme.tsx";
-import responsiveDarkTheme from "./components/theme/darkTheme.tsx";
-import responsiveLightTheme from "./components/theme/lightTheme.tsx";
+import darkTheme from "./components/theme/darkTheme.tsx";
+import lightTheme from "./components/theme/lightTheme.tsx";
 
 import { Test } from "@components/Test";
 
@@ -20,7 +20,7 @@ import { Test } from "@components/Test";
 // import { Test } from "@components/Test";
 
 function App() {
-  const [theme, setTheme] = useState<object>(responsiveDarkTheme);
+  const [theme, setTheme] = useState<object>(darkTheme);
   const [isShowSearchSection, setIsShowSearchSection] = useState<boolean>(
     false
   ); //false
@@ -35,7 +35,7 @@ function App() {
   // Функция переключения отображения секции Search
   const handleOpenSearchPopup = (): void => {
     // Переключение на темную тему при открытии попапа
-    setTheme(responsiveDarkTheme ? responsiveLightTheme : responsiveDarkTheme);
+    setTheme(darkTheme ? lightTheme : darkTheme);
     setIsShowSearchSection(true);
   };
 
@@ -46,7 +46,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <main>
-        <div className={styles.image_container}>
+        
           <Header
             handleOpenPopup={handleOpenPopup}
             handleClosePopup={handleClosePopup}
@@ -54,25 +54,14 @@ function App() {
             isShowSearchSection={isShowSearchSection}
             handleOpenSearchPopup={handleOpenSearchPopup}
           />
-          <Login />
-          <Main
-            isShowSearchSection={isShowSearchSection}
-            handleOpenSearchPopup={handleOpenSearchPopup}
-          />
-          <Test />
-          <Header
-            handleOpenPopup={handleOpenPopup}
-            handleClosePopup={handleClosePopup}
-            openPopup={openPopup}
-            isShowSearchSection={isShowSearchSection}
-            handleOpenSearchPopup={handleOpenSearchPopup}
-          />
+          {/* <Login /> */}
           <Main
             isShowSearchSection={isShowSearchSection}
             handleOpenSearchPopup={handleOpenSearchPopup}
           />
           {/* <Test /> */}
-        </div>
+
+        
       </main>
     </ThemeProvider>
   );

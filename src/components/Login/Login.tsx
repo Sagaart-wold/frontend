@@ -16,7 +16,7 @@ export function Login() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid },
+    formState: { errors }, //isValid
   } = useForm<Inputs>({
     mode: "onChange",
   });
@@ -27,9 +27,9 @@ export function Login() {
   };
 
   return (
-    <div className={styles.container}>
+    // <div className={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <Typography style={{marginBottom:'24px'}} variant="h2">Вход</Typography>
+        <Typography style={{textAlign: 'center'}} variant="h3">Вход</Typography>
         <span className={styles.errors}>
           {errors.email?.message || errors.password?.message}
         </span>
@@ -66,6 +66,6 @@ export function Login() {
           Зарегистрироваться
         </Button>
       </form>
-    </div>
+    // </div>
   );
 }
