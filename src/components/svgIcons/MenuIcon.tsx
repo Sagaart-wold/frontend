@@ -15,7 +15,7 @@ const MenuIcon: React.FC<MenuIconProps> = (props) => (
       d="M5 16L27 16"
       stroke="currentColor"
       strokeOpacity="1"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinejoin="round"
       strokeLinecap="round"
     />
@@ -29,7 +29,7 @@ const MenuIcon: React.FC<MenuIconProps> = (props) => (
       d="M5 8L23 8"
       stroke="currentColor"
       strokeOpacity="1"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinejoin="round"
       strokeLinecap="round"
     />
@@ -43,7 +43,7 @@ const MenuIcon: React.FC<MenuIconProps> = (props) => (
       d="M5 24L23 24"
       stroke="currentColor"
       strokeOpacity="1"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinejoin="round"
       strokeLinecap="round"
     />

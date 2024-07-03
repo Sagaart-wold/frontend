@@ -1,16 +1,7 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 const mainTheme = createTheme({
   palette: {
-    // primary: {
-    //   main: "#111318", //присваивается вновь созданным элементам по умолчанию
-    //   light: "#FFF",
-    // },
-    // secondary: {
-    //   // для вывертки
-    //   main: "#FFF",
-    //   // dark: '#111318'
-    // },
     info: {
       main: "#AEAFB2",
     },
@@ -71,48 +62,52 @@ const mainTheme = createTheme({
       fontStyle: "normal",
     },
     body1: {
-      // в макете B2
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      // in the design B2
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "20px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     body2: {
-      // в макете B3
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      // in the design B3
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "18px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     subtitle1: {
-      // в макете B1
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      // in the design B1
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "36px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     subtitle2: {
-      // в макете B4
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      // in the design B4
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "16px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
     button: {
-      // в макете B2, не ипользовать - применяется к кнопкам автоматически
-      fontFamily: "Monsterat, Roboto, Inter, sans-serif",
+      // in the design B2, do not use - applied to buttons automatically
+      fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "18px",
+      fontWeight: 400,
       fontStyle: "normal",
     },
   },
 
   components: {
-    MuiDrawer: { // выплывающий сбоку попап
+    MuiDrawer: { // side popup
       styleOverrides: {
         paper: {
-          width: 522,
           backgroundColor: "#fff",
-          height: "100%",
+          height: '1080px',
         },
       },
     },
-    MuiButton: { // кнопки
+    MuiButton: { // buttons
       styleOverrides: {
         root: {
           borderRadius: 0,
@@ -120,19 +115,16 @@ const mainTheme = createTheme({
           height: 61,
         },
         sizeSmall: {
-          // fontSize: '12px',
           width: "205px",
         },
         sizeMedium: {
-          // fontSize: '14px',
           width: "260px",
         },
         sizeLarge: {
-          // fontSize: '16px',
           width: "402px",
         },
         outlinedPrimary: {
-          // белые кнопки без контура
+          // white buttons without border
           border: "none",
           color: "#111318",
           backgroundColor: "#FFF",
@@ -149,45 +141,33 @@ const mainTheme = createTheme({
           },
         },
         outlinedSecondary: {
-          // белые кнопки с контуром
+          // white buttons with border
           color: "#111318",
           backgroundColor: "#FFF",
           border: "1px solid #111318",
           "&:hover": {
-            backgroundColor: "#FFF", // сохраняем белый цвет при наведении
+            backgroundColor: "#FFF", // keep white color on hover
           },
           "&:active": {
-            backgroundColor: "#FFF", // сохраняем белый цвет при нажатии
+            backgroundColor: "#FFF", // keep white color on active
             border: "1px solid #111318",
           },
           "&:focus": {
-            backgroundColor: "#FFF", // сохраняем белый цвет при фокусе
+            backgroundColor: "#FFF", // keep white color on focus
             border: "1px solid #111318",
           },
         },
       },
     },
-    MuiTypography: {
-      // Для переопределения общих стилей всей типографики
-      styleOverrides: {
-        root: {
-          // marginBottom: '20px',
-        },
-        h1: {
-          // color: '#111318',
-        },
-        body1: {
-          // color: '#AEAFB2',
-        },
-      },
-    },
-    MuiIconButton: { // иконки
+    MuiIconButton: { // icons
       styleOverrides: {
         root: {
           width: "32px",
           height: "32px",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          padding: 0,
+          margin: 0,
         },
       },
     },
@@ -203,20 +183,7 @@ const mainTheme = createTheme({
         icon: {},
       },
     },
-    MuiMenuItem: { //стилизация меню из попапа
-      //
-      // styleOverrides: {
-      //   root: {
-      //     "&.Mui-selected": {
-      //       backgroundColor: "#47B881",
-      //       "&:hover": {
-      //         backgroundColor: "#3DA8D6",
-      //       },
-      //     },
-      //   },
-      // },
-    },
-    MuiOutlinedInput: { // инпут
+    MuiOutlinedInput: { // input
       styleOverrides: {
         root: {
           outline: 'none',
@@ -225,7 +192,7 @@ const mainTheme = createTheme({
           backgroundColor: 'fff',
           color: 'fff',
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#000', // черная рамка при фокусе
+            borderColor: '#000', // black border on focus
           },
         },
       },
@@ -233,7 +200,4 @@ const mainTheme = createTheme({
   },
 });
 
-//автоматическая подстройка шрифтов под размер экрана
-const responsiveTheme = responsiveFontSizes(mainTheme);
-
-export default responsiveTheme;
+export default mainTheme;

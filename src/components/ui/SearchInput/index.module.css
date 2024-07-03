@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: 402px;
-    border-bottom: 1px solid var(--white-text);
+    border-bottom: 1px solid white;
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -21,9 +21,9 @@
     align-items: center;
     border: none;
     background-color: transparent;
-    caret-color: var(--white-text);
+    caret-color: white;
     width: 100%;
-    color: var(--white-text);
+    color: white;
     font-family: var(--ff-paragraph);
     font-size: var(--fz-p3);
     outline: none;
@@ -35,9 +35,11 @@
 }
 
 .input::placeholder{
-    color: var(--white-text);
-    font-family: var(--ff-paragraph);
-    font-size: var(--fz-p3);
+    color: white;
+    font-size: 18px;
+    font-family: Montserrat, Roboto, Inter, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     transition: opacity 0.3s ease;
 }
 
