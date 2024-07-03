@@ -2,19 +2,19 @@
 
 _MVP сервис онлайн-продажи и оценки предметов искусства. Хакатон_
 
-Команда: Лазарева Анастасия и Сердюков Владислав
+##Команда: Лазарева Анастасия и Сердюков Владислав
+
+## Ссылка на задеплоенное приложение: http://158.160.171.226/
 
 ### Основные технологии:
 
-React 
-ReactDOM 
-Redux 
-Toolkit 
-React Hook Form
+[React](https://react.dev/)<br>
+[Redux Toolkit](https://redux-toolkit.js.org/)
+[React Hook Form](https://www.react-hook-form.com/)
 
 ### Стилизация:
 
-Material-UI
+[Material-UI](https://mui.com/)
 Styled Components
 
 ### Скрипты:
@@ -40,5 +40,10 @@ TypeScript
 - Запустить
 ```
 *npm run build 
-*npm run dev
+*npm run start
 ```
+
+## Шрифты
+
+[Cormorant](https://fonts.google.com/specimen/Cormorant?query=Cormorant "GoogleFonts")
+[Montserrat](https://fonts.google.com/?query=+Montserrat "GoogleFonts")
