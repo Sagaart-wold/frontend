@@ -39,7 +39,7 @@ export const MyGlobalStyles: React.FC<MyProps> = ({ children }) => (
         ul: {
           listStyle: "none",
         },
-        /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+        /* Remove all animations and transitions for people who prefer not to use them */
         "@media (prefers-reduced-motion: reduce)": {
           "*": {
             animationDuration: "0.01ms !important",

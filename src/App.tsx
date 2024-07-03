@@ -10,17 +10,17 @@ function App() {
   const [isShowSearchSection, setIsShowSearchSection] = useState<boolean>(
     false
   );
-  // Единый стейт для боковых попапов
+  // Unified state for side popups
   const [openPopup, setOpenPopup] = useState<string | null>(null);
 
-  // Функция открытия для выезжающего меню слева и авторизации/регистрации справа, принимает id попапа (string)
+  // Function to open the sliding menu on the left and authorization/registration on the right, takes the id of the popup (string)
   const handleOpenPopup = (id: string): void => {
     setOpenPopup(id);
   };
 
-  // Функция переключения отображения секции Search
+  // Function to toggle the display of the Search section
   const handleOpenSearchPopup = (): void => {
-    // Переключение на темную тему при открытии попапа
+    // Switch to the dark theme when the popup is opened
     setTheme(darkTheme ? lightTheme : darkTheme);
     setIsShowSearchSection(true);
   };

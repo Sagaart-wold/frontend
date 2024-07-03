@@ -62,35 +62,35 @@ const mainTheme = createTheme({
       fontStyle: "normal",
     },
     body1: {
-      // в макете B2
+      // in the design B2
       fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "20px",
       fontWeight: 400,
       fontStyle: "normal",
     },
     body2: {
-      // в макете B3
+      // in the design B3
       fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "18px",
       fontWeight: 400,
       fontStyle: "normal",
     },
     subtitle1: {
-      // в макете B1
+      // in the design B1
       fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "36px",
       fontWeight: 400,
       fontStyle: "normal",
     },
     subtitle2: {
-      // в макете B4
+      // in the design B4
       fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "16px",
       fontWeight: 400,
       fontStyle: "normal",
     },
     button: {
-      // в макете B2, не ипользовать - применяется к кнопкам автоматически
+      // in the design B2, do not use - applied to buttons automatically
       fontFamily: "Montserrat, Roboto, Inter, sans-serif",
       fontSize: "18px",
       fontWeight: 400,
@@ -99,7 +99,7 @@ const mainTheme = createTheme({
   },
 
   components: {
-    MuiDrawer: { // выплывающий сбоку попап
+    MuiDrawer: { // side popup
       styleOverrides: {
         paper: {
           backgroundColor: "#fff",
@@ -107,7 +107,7 @@ const mainTheme = createTheme({
         },
       },
     },
-    MuiButton: { // кнопки
+    MuiButton: { // buttons
       styleOverrides: {
         root: {
           borderRadius: 0,
@@ -124,7 +124,7 @@ const mainTheme = createTheme({
           width: "402px",
         },
         outlinedPrimary: {
-          // белые кнопки без контура
+          // white buttons without border
           border: "none",
           color: "#111318",
           backgroundColor: "#FFF",
@@ -141,25 +141,25 @@ const mainTheme = createTheme({
           },
         },
         outlinedSecondary: {
-          // белые кнопки с контуром
+          // white buttons with border
           color: "#111318",
           backgroundColor: "#FFF",
           border: "1px solid #111318",
           "&:hover": {
-            backgroundColor: "#FFF", // сохраняем белый цвет при наведении
+            backgroundColor: "#FFF", // keep white color on hover
           },
           "&:active": {
-            backgroundColor: "#FFF", // сохраняем белый цвет при нажатии
+            backgroundColor: "#FFF", // keep white color on active
             border: "1px solid #111318",
           },
           "&:focus": {
-            backgroundColor: "#FFF", // сохраняем белый цвет при фокусе
+            backgroundColor: "#FFF", // keep white color on focus
             border: "1px solid #111318",
           },
         },
       },
     },
-    MuiIconButton: { // иконки
+    MuiIconButton: { // icons
       styleOverrides: {
         root: {
           width: "32px",
@@ -183,7 +183,7 @@ const mainTheme = createTheme({
         icon: {},
       },
     },
-    MuiOutlinedInput: { // инпут
+    MuiOutlinedInput: { // input
       styleOverrides: {
         root: {
           outline: 'none',
@@ -192,7 +192,7 @@ const mainTheme = createTheme({
           backgroundColor: 'fff',
           color: 'fff',
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#000', // черная рамка при фокусе
+            borderColor: '#000', // black border on focus
           },
         },
       },

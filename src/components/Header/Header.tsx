@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({
               display: "flex",
             }}
           >
-            {/* Скрывать строку поиска если показана секция Search */}
+            {/* Hide the search bar if the Search section is displayed. */}
             {!isShowSearchSection ? (
               <div className={styles.input_container}>
                 <SearchInput
@@ -145,7 +145,6 @@ export const Header: React.FC<HeaderProps> = ({
               <AuthPopup
                 openPopup={openPopup}
                 handleClosePopup={handleClosePopup}
-                // handleOpenPopup={handleOpenPopup}
               />
             </div>
           </Box>

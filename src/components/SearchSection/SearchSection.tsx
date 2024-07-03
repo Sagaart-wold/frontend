@@ -1,4 +1,3 @@
-// import React from 'react';
 import { SearchSectionProps } from "../types";
 import {
   Box,
@@ -10,7 +9,6 @@ import {
 import { useForm, Controller } from "react-hook-form";
 
 export const SearchSection: React.FC<SearchSectionProps> = () => {
-  // запрос к серверу, получение карточек и рекомендаций, затем загрузка
 
   const { control, handleSubmit, reset } = useForm({
     defaultValues: {

@@ -5,7 +5,6 @@ const lightTheme = createTheme({
   ...mainTheme,
   palette: {
     primary: {
-      //присваивается вновь созданным элементам по умолчанию
       main: "#FFF",
     },
     secondary: {

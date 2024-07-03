@@ -16,7 +16,7 @@ export function Login() {
     register,
     handleSubmit,
     reset,
-    formState: { errors }, //isValid
+    formState: { errors },
   } = useForm<Inputs>({
     mode: "onChange",
   });
