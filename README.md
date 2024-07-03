@@ -9,17 +9,17 @@ _MVP сервис онлайн-продажи и оценки предметов
 ### Основные технологии:
 
 [React](https://react.dev/)<br>
-[Redux Toolkit](https://redux-toolkit.js.org/)
-[React Hook Form](https://www.react-hook-form.com/)
+[Redux Toolkit](https://redux-toolkit.js.org/)<br>
+[React Hook Form](https://www.react-hook-form.com/)<br>
 
 ### Стилизация:
 
-[Material-UI](https://mui.com/)
+[Material-UI](https://mui.com/)<br>
 Styled Components
 
 ### Скрипты:
 
-Vite
+Vite<br>
 TypeScript
 
 
@@ -39,11 +39,11 @@ TypeScript
 ```
 - Запустить
 ```
-*npm run build 
+*npm run build
 *npm run start
 ```
 
 ## Шрифты
 
-[Cormorant](https://fonts.google.com/specimen/Cormorant?query=Cormorant "GoogleFonts")
+[Cormorant](https://fonts.google.com/specimen/Cormorant?query=Cormorant "GoogleFonts")<br>
 [Montserrat](https://fonts.google.com/?query=+Montserrat "GoogleFonts")
